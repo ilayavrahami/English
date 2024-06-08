@@ -75,7 +75,7 @@ function resetGame(){
 }
 
 
-const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+const alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('');
 const container = document.getElementById('letterContainer');
 const input = document.getElementById('inputLetter');
 
