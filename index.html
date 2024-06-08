@@ -7,17 +7,40 @@
 <link rel="stylesheet" href="index.css">
 </head>
 <body dir="rtl">
-    <h1>כתבו את האות</h1>
-    <button onclick="startGame()">להתחיל משחק</button>
-    <br><br>
-    <input type="text" placeholder="הקלדו את האות ששמעתם">
-    <br><br>
-    <button onclick="examination()">בדיקה</button>
-    <br><br>
-    <h2 id="examination"></h2>
-<audio id="audio" preload="auto">
-  <source src="" type="audio/wav" id="audio-source">
-</audio>
+  <h1 class="header">אנגלית - משחק אותיות</h1>
+  <div class="container">
+    <div class="column" col="3">
+      <h1>ניקוד</h1>
+      <h2 id="points"></h2>
+    </div>
+    
+    <div class="column" col="9">
+      <h1>כתבו את האות</h1>
+      <button onclick="play('new')">להתחיל משחק</button>
+      <br><br>
+      <input id="inputLetter" type="text" placeholder="הקלדו את האות ששמעתם" onkeyup="examination()">
+      <div id="resultMessage" hidden="true">
+        <br>
+        <h2 id="examination"></h2>
+      </div>
+      <audio id="audio" preload="auto">
+        <source src="" type="audio/wav" id="audio-source">
+      </audio>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="column" col="6">
+      <h1>אותיות נכונות</h1>
+      <h2 id="rightLetters"></h2>
+    </div>
+    <div class="column" col="6">
+      <h1>אותיות שגויות</h1>
+      <h2 id="wrongLetters"></h2>
+    </div>
+  </div>
+  <div id="letterContainer"></div>
+
 </body>
 <script src="index.js"></script>
 </html>
