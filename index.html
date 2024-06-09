@@ -11,14 +11,17 @@
   <div class="container">
     <div class="column" col="3">
       <h1>ניקוד</h1>
-      <h2 id="points"></h2>
+      <h2 id="points">0</h2>
     </div>
     
     <div class="column" col="9">
       <h1>כתבו את האות</h1>
       <button onclick="play('new')">להתחיל משחק</button>
       <br><br>
-      <input id="inputLetter" type="text" placeholder="הקלדו את האות ששמעתם" onkeyup="examination()">
+      <div id="inputContainer">
+        <input id="inputLetter" type="text" placeholder="הקלדו את האות ששמעתם" onkeyup="examination()">
+        <div id="timer">זמן נותר: 20 שניות</div>
+      </div>      
       <div id="resultMessage" hidden="true">
         <br>
         <h2 id="examination"></h2>
@@ -39,8 +42,8 @@
       <h2 id="wrongLetters"></h2>
     </div>
   </div>
-  <div id="letterContainer" dir="ltr"></div>
-
+  <div dir="ltr" id="letterContainer"></div>
+  <div id="timer"></div>
 </body>
 <script src="index.js"></script>
 </html>
